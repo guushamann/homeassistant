@@ -1,0 +1,359 @@
+- id: '1734290017636'
+  alias: Backup error melding
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.backups_stale
+  conditions: []
+  actions:
+  - action: notify.mobile_app_telefoon
+    data:
+      message: De backup van Home assistant is mislukt
+  mode: single
+- id: '1734291960220'
+  alias: Kink op Roam
+  description: Kink op Roam
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.sonos_roam
+    data:
+      media_content_id: media-source://radio_browser/c19d0f8c-24a5-11e9-a80b-52543be04c81
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734292054927'
+  alias: StuBru op Roam
+  description: StuBru op Roam
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.sonos_roam
+    data:
+      media_content_id: media-source://radio_browser/550f4b47-a545-4b1d-8c08-3b520c4db329
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734292140752'
+  alias: Pinguin op Roam
+  description: Pinguin op Roam
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.sonos_roam
+    data:
+      media_content_id: media-source://radio_browser/962e8aac-0601-11e8-ae97-52543be04c81
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734292140753'
+  alias: Pinguin op Huiskamer
+  description: Pinguin op Huiskamer
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.huiskamer
+    data:
+      media_content_id: media-source://radio_browser/962e8aac-0601-11e8-ae97-52543be04c81
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734291960221'
+  alias: Kink op Huiskamer
+  description: Kink op Huiskamer
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.huiskamer
+    data:
+      media_content_id: media-source://radio_browser/c19d0f8c-24a5-11e9-a80b-52543be04c81
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734292054928'
+  alias: StuBru op Huiskamer
+  description: StuBru op Huiskamer
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.huiskamer
+    data:
+      media_content_id: media-source://radio_browser/550f4b47-a545-4b1d-8c08-3b520c4db329
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734292140754'
+  alias: Pinguin op Werkkamer
+  description: Pinguin op Werkkamer
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.werkkamer
+    data:
+      media_content_id: media-source://radio_browser/962e8aac-0601-11e8-ae97-52543be04c81
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734291960222'
+  alias: Kink op Werkkamer
+  description: Kink op Werkkamer
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.werkkamer
+    data:
+      media_content_id: media-source://radio_browser/c19d0f8c-24a5-11e9-a80b-52543be04c81
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734292054929'
+  alias: StuBru op Werkkamer
+  description: StuBru op Werkkamer
+  triggers: []
+  conditions: []
+  actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.werkkamer
+    data:
+      media_content_id: media-source://radio_browser/550f4b47-a545-4b1d-8c08-3b520c4db329
+      media_content_type: audio/mpeg
+  mode: single
+- id: '1734303624022'
+  alias: Slapen charging
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.telefoon_battery_state
+    to: charging
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions:
+  - condition: time
+    after: '23:00:00'
+    before: 07:00:00
+    weekday:
+    - sun
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      area_id:
+      - woonkamer
+      - werkkamer
+      - hal_1e_verdieping
+      - keuken
+      - slaapkamer
+      - eettafel
+  mode: single
+- id: '1734524165495'
+  alias: Robb schakelaar beneden
+  description: ''
+  use_blueprint:
+    path: guushamann/robbButton.yaml
+    input:
+      remote: 895eeb75125cb39b97e8c14392d2b225
+      on_button_1_short:
+      - action: light.toggle
+        metadata: {}
+        data:
+          kelvin: 3593
+          brightness_pct: 100
+        target:
+          area_id: woonkamer
+      off_button_1_short:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_step_pct: -10
+        target:
+          area_id: woonkamer
+      on_button_2_short:
+      - action: light.toggle
+        metadata: {}
+        data:
+          kelvin: 3593
+          brightness_pct: 100
+        target:
+          area_id: eettafel
+      off_button_2_short:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_step_pct: -10
+        target:
+          area_id: eettafel
+      on_button_3_short:
+      - action: light.toggle
+        metadata: {}
+        data:
+          kelvin: 3593
+          brightness_pct: 100
+        target:
+          area_id: keuken
+      off_button_3_short:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_step_pct: -10
+        target:
+          area_id: keuken
+      on_button_4_short:
+      - action: light.toggle
+        metadata: {}
+        data:
+          kelvin: 3593
+          brightness_pct: 100
+        target:
+          area_id: hal_1e_verdieping
+      off_button_4_short:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_step_pct: -10
+        target:
+          area_id: hal_1e_verdieping
+- id: '1734645432127'
+  alias: hal smart btn action
+  description: ''
+  use_blueprint:
+    path: guushamann/innrButton.yaml
+    input:
+      remote_device_id: 469eca51404a69e4876f0113e40708e7
+      light_target:
+      - light.lamp_1e_verdieping_light
+      on_fixed:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 100
+        target:
+          area_id: hal_1e_verdieping
+      off_fixed:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: hal_1e_verdieping
+      input_helper: input_text.lamp_hal
+      action_type: fix
+- id: '1734696238085'
+  alias: knop slaapkamer
+  description: ''
+  use_blueprint:
+    path: guushamann/innrButton.yaml
+    input:
+      action_type: fix
+      remote_device_id: 586c98685ab3dcf9b73e321b779ac53a
+      input_helper: input_text.lamp_hal
+      light_target:
+      - light.slaapkamer_lamp_light
+      on_fixed:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 100
+        target:
+          area_id: slaapkamer
+      off_fixed:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: slaapkamer
+- id: '1734726189051'
+  alias: knop werkkamer
+  description: ''
+  use_blueprint:
+    path: guushamann/innrButton.yaml
+    input:
+      remote_device_id: 7c9328c2ab69d8885059dc99fa57181e
+      light_target:
+      - light.werkkamer
+      on_fixed:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 100
+        target:
+          area_id: hal_1e_verdieping
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 100
+        target:
+          area_id: werkkamer
+      off_fixed:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: hal_1e_verdieping
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: werkkamer
+      input_helper: input_text.lamp_hal
+      action_type: fix
+- id: '1734732293778'
+  alias: Opstaan
+  description: ''
+  triggers:
+  - trigger: time
+    at: input_datetime.wakeup
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      transition: 200
+    target:
+      area_id:
+      - slaapkamer
+      - woonkamer
+      - hal_1e_verdieping
+  - action: media_player.volume_set
+    metadata: {}
+    data:
+      volume_level: 0.23
+    target:
+      entity_id:
+      - media_player.huiskamer
+      - media_player.sonos_roam
+      - media_player.werkkamer
+  - action: automation.trigger
+    metadata: {}
+    data:
+      skip_condition: true
+    target:
+      entity_id:
+      - automation.pinguin_on_huiskamer
+  - action: media_player.join
+    metadata: {}
+    data:
+      group_members:
+      - media_player.sonos_roam
+      - media_player.werkkamer
+    target:
+      entity_id: media_player.huiskamer
+  mode: single

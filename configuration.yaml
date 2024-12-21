@@ -1,0 +1,122 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+rest:
+  - resource: https://mijn.nextenergy.nl/Website_CW/screenservices/Website_CW/MainFlow/WB_EnergyPrices/DataActionGetDataPoints
+    method: POST
+    headers:
+      content-type: application/json; charset=UTF-8
+      x-csrftoken: T6C+9iB49TLra4jEsMeSckDMNhQ=
+    payload_template: >-
+      {
+        "versionInfo": {
+          "moduleVersion": "JVXHhS7tlS0OB0XUVzWUbw",
+          "apiVersion": "Bc8_XAfp3W7kn4dKB4nXdg"
+        },
+        "viewName": "MainFlow.MarketPrices",
+        "screenData": {
+          "variables": {
+            "Graphsize": 348,
+            "Filter_CurrentHour": 8,
+            "Filter_PriceDate": "{{ now().strftime('%Y-%m-%d') }}",
+            "Filter_CostsLevelId": 3,
+            "IsOpenPopup": false,
+            "HighchartsJSON": "chart: { ... }",
+            "DistributionId": 3,
+            "IsDesktop": false,
+            "IsTablet": false,
+            "CurrentElectricityPrice_Local": "€0.12",
+            "IsLoading": true,
+            "NE_StartDate": "2022-07-01"
+          }
+        }
+      }
+    scan_interval: 3600 # Update every hour
+    sensor:
+      - name: "next_energy_current"
+        value_template: "{{ value_json['data']['DataPoints']['List'][now().strftime('%H')|int-1]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_0"
+        value_template: "{{ value_json['data']['DataPoints']['List'][0]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_1"
+        value_template: "{{ value_json['data']['DataPoints']['List'][1]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_2"
+        value_template: "{{ value_json['data']['DataPoints']['List'][2]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_3"
+        value_template: "{{ value_json['data']['DataPoints']['List'][3]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_4"
+        value_template: "{{ value_json['data']['DataPoints']['List'][4]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_5"
+        value_template: "{{ value_json['data']['DataPoints']['List'][5]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_6"
+        value_template: "{{ value_json['data']['DataPoints']['List'][6]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_7"
+        value_template: "{{ value_json['data']['DataPoints']['List'][7]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_8"
+        value_template: "{{ value_json['data']['DataPoints']['List'][8]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_9"
+        value_template: "{{ value_json['data']['DataPoints']['List'][9]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_10"
+        value_template: "{{ value_json['data']['DataPoints']['List'][10]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_11"
+        value_template: "{{ value_json['data']['DataPoints']['List'][11]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_12"
+        value_template: "{{ value_json['data']['DataPoints']['List'][12]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_13"
+        value_template: "{{ value_json['data']['DataPoints']['List'][13]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_14"
+        value_template: "{{ value_json['data']['DataPoints']['List'][14]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_15"
+        value_template: "{{ value_json['data']['DataPoints']['List'][15]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_16"
+        value_template: "{{ value_json['data']['DataPoints']['List'][16]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_17"
+        value_template: "{{ value_json['data']['DataPoints']['List'][17]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_18"
+        value_template: "{{ value_json['data']['DataPoints']['List'][18]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_19"
+        value_template: "{{ value_json['data']['DataPoints']['List'][19]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_20"
+        value_template: "{{ value_json['data']['DataPoints']['List'][20]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_21"
+        value_template: "{{ value_json['data']['DataPoints']['List'][21]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_22"
+        value_template: "{{ value_json['data']['DataPoints']['List'][22]['Value'] }}"
+        unit_of_measurement: "eur"
+      - name: "next_energy_23"
+        value_template: "{{ value_json['data']['DataPoints']['List'][23]['Value'] }}"
+        unit_of_measurement: "eur"

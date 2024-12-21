@@ -1,0 +1,556 @@
+- id: '1734727468627'
+  name: Watch TV
+  entities:
+    light.spacelamp1:
+      min_color_temp_kelvin: 1700
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Night Mode
+      - Date Night
+      - Movie
+      - Sunrise
+      - Sunset
+      - Romance
+      - Happy Birthday
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Home
+      - Candle Flicker
+      - Tea Time
+      - Slow Temp
+      - Stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - rgb
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 1700
+      color_temp: 588
+      hs_color:
+      - 28.401
+      - 100
+      rgb_color:
+      - 255
+      - 121
+      - 0
+      xy_color:
+      - 0.62
+      - 0.368
+      flowing: false
+      music_mode: false
+      friendly_name: Spacelamp 1
+      supported_features: 44
+      state: 'on'
+    light.spacelamp2:
+      min_color_temp_kelvin: 1700
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Night Mode
+      - Date Night
+      - Movie
+      - Sunrise
+      - Sunset
+      - Romance
+      - Happy Birthday
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Home
+      - Candle Flicker
+      - Tea Time
+      - Slow Temp
+      - Stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - rgb
+      effect:
+      color_mode: color_temp
+      brightness: 222
+      color_temp_kelvin: 1700
+      color_temp: 588
+      hs_color:
+      - 28.401
+      - 100
+      rgb_color:
+      - 255
+      - 121
+      - 0
+      xy_color:
+      - 0.62
+      - 0.368
+      flowing: false
+      music_mode: false
+      friendly_name: Spacelamp 2
+      supported_features: 44
+      state: 'on'
+    light.spacelamp3:
+      min_color_temp_kelvin: 1700
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Night Mode
+      - Date Night
+      - Movie
+      - Sunrise
+      - Sunset
+      - Romance
+      - Happy Birthday
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Home
+      - Candle Flicker
+      - Tea Time
+      - Slow Temp
+      - Stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - rgb
+      effect:
+      color_mode: color_temp
+      brightness: 143
+      color_temp_kelvin: 1700
+      color_temp: 588
+      hs_color:
+      - 28.401
+      - 100
+      rgb_color:
+      - 255
+      - 121
+      - 0
+      xy_color:
+      - 0.62
+      - 0.368
+      flowing: false
+      music_mode: false
+      friendly_name: Spacelamp 3
+      supported_features: 44
+      state: 'on'
+    light.tv_staande_lamp_1_licht:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      effect_list:
+      - 'off'
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 1801
+      color_temp: 555
+      hs_color:
+      - 29.751
+      - 100
+      rgb_color:
+      - 255
+      - 126
+      - 0
+      xy_color:
+      - 0.614
+      - 0.373
+      off_with_transition: false
+      off_brightness:
+      friendly_name: TV staande lamp 1
+      supported_features: 44
+      state: 'on'
+    light.tv_staande_lamp_2_licht_2:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      effect_list:
+      - 'off'
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 1801
+      color_temp: 555
+      hs_color:
+      - 29.751
+      - 100
+      rgb_color:
+      - 255
+      - 126
+      - 0
+      xy_color:
+      - 0.614
+      - 0.373
+      off_with_transition: false
+      off_brightness:
+      friendly_name: TV staande lamp 2
+      supported_features: 44
+      state: 'on'
+    light.eettafel_1_light_2:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Eettafel 1 Light
+      supported_features: 40
+      state: 'off'
+    light.eettafel_2_light:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Eettafel 2 Light
+      supported_features: 40
+      state: 'off'
+    light.eettafel_3_light:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Eettafel 3 Light
+      supported_features: 40
+      state: 'off'
+    light.keukenlamp_light:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Keukenlamp Light
+      supported_features: 40
+      state: 'off'
+  icon: mdi:television
+  metadata: {}
+- id: '1734727964497'
+  name: 'Normaal '
+  entities:
+    light.spacelamp1:
+      min_color_temp_kelvin: 1700
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Night Mode
+      - Date Night
+      - Movie
+      - Sunrise
+      - Sunset
+      - Romance
+      - Happy Birthday
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Home
+      - Candle Flicker
+      - Tea Time
+      - Slow Temp
+      - Stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - rgb
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 4926
+      color_temp: 203
+      hs_color:
+      - 26.931
+      - 20.257
+      rgb_color:
+      - 255
+      - 227
+      - 203
+      xy_color:
+      - 0.374
+      - 0.351
+      flowing: false
+      music_mode: false
+      friendly_name: Spacelamp 1
+      supported_features: 44
+      state: 'on'
+    light.spacelamp2:
+      min_color_temp_kelvin: 1700
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Night Mode
+      - Date Night
+      - Movie
+      - Sunrise
+      - Sunset
+      - Romance
+      - Happy Birthday
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Home
+      - Candle Flicker
+      - Tea Time
+      - Slow Temp
+      - Stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - rgb
+      effect:
+      color_mode: color_temp
+      brightness: 222
+      color_temp_kelvin: 4926
+      color_temp: 203
+      hs_color:
+      - 26.931
+      - 20.257
+      rgb_color:
+      - 255
+      - 227
+      - 203
+      xy_color:
+      - 0.374
+      - 0.351
+      flowing: false
+      music_mode: false
+      friendly_name: Spacelamp 2
+      supported_features: 44
+      state: 'on'
+    light.spacelamp3:
+      min_color_temp_kelvin: 1700
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 588
+      effect_list:
+      - Strobe color
+      - Police
+      - Christmas
+      - RGB
+      - Random Loop
+      - Fast Random Loop
+      - LSD
+      - Slowdown
+      - Night Mode
+      - Date Night
+      - Movie
+      - Sunrise
+      - Sunset
+      - Romance
+      - Happy Birthday
+      - Disco
+      - Strobe epilepsy!
+      - Alarm
+      - Police2
+      - WhatsApp
+      - Facebook
+      - Twitter
+      - Home
+      - Candle Flicker
+      - Tea Time
+      - Slow Temp
+      - Stop
+      supported_color_modes:
+      - color_temp
+      - hs
+      - rgb
+      effect:
+      color_mode: color_temp
+      brightness: 143
+      color_temp_kelvin: 4926
+      color_temp: 203
+      hs_color:
+      - 26.931
+      - 20.257
+      rgb_color:
+      - 255
+      - 227
+      - 203
+      xy_color:
+      - 0.374
+      - 0.351
+      flowing: false
+      music_mode: false
+      friendly_name: Spacelamp 3
+      supported_features: 44
+      state: 'on'
+    light.tv_staande_lamp_1_licht:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      effect_list:
+      - 'off'
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 4975
+      color_temp: 201
+      hs_color:
+      - 26.976
+      - 19.584
+      rgb_color:
+      - 255
+      - 228
+      - 205
+      xy_color:
+      - 0.372
+      - 0.35
+      off_with_transition: false
+      off_brightness:
+      friendly_name: TV staande lamp 1
+      supported_features: 44
+      state: 'on'
+    light.tv_staande_lamp_2_licht_2:
+      min_color_temp_kelvin: 1801
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 555
+      effect_list:
+      - 'off'
+      - colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 4975
+      color_temp: 201
+      hs_color:
+      - 26.976
+      - 19.584
+      rgb_color:
+      - 255
+      - 228
+      - 205
+      xy_color:
+      - 0.372
+      - 0.35
+      off_with_transition: false
+      off_brightness:
+      friendly_name: TV staande lamp 2
+      supported_features: 44
+      state: 'on'
+    light.eettafel_1_light_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Eettafel 1 Light
+      supported_features: 40
+      state: 'on'
+    light.eettafel_2_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Eettafel 2 Light
+      supported_features: 40
+      state: 'on'
+    light.eettafel_3_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Eettafel 3 Light
+      supported_features: 40
+      state: 'on'
+    light.keukenlamp_light:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 254
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Keukenlamp Light
+      supported_features: 40
+      state: 'on'
+  metadata: {}
+  icon: mdi:sun-compass
